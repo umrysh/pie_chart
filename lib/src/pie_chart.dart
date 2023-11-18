@@ -190,11 +190,15 @@ class _PieChartState extends State<PieChart>
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             _getChart(),
-            _getLegend(
-              padding: EdgeInsets.only(
-                top: widget.chartLegendSpacing,
+            Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: _getLegend(
+                padding: EdgeInsets.only(
+                  top: widget.chartLegendSpacing,
+                ),
               ),
-            ),
+            )
+
           ],
         );
       case LegendPosition.left:
